@@ -11,8 +11,8 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
     //                 <li>Star: ${star}</li>
     //                 <li>Distance from Earth: </li>
     //                 <li>Number of Moons: </li>
-    // //    fetch("https://handlers.education.launchcode.org/static/planets.json").then(function (response) {
-    // //     response.json().then(function (json) {
+    //    fetch("https://handlers.education.launchcode.org/static/planets.json").then(function (response) {
+    //    response.json().then(function (json) {
          const missionTarget = document.getElementById("missionTarget");
     
                      missionTarget.innerHTML += `
@@ -135,7 +135,7 @@ planetsReturned = await fetch("https://handlers.education.launchcode.org/static/
 
 };
 
-function pickPlanet (planets) {
+function pickPlanet () {
     window.addEventListener("load", () => {
         fetch("https://handlers.education.launchcode.org/static/planets.json").then(function (response) {
             response.json().then(function (planetaryData) {
