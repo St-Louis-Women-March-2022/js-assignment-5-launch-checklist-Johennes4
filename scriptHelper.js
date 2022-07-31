@@ -32,7 +32,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
 
 
 
-function validateInput(testInput) {
+function validateInput() {
 document.addEventListener("submit", function (event) {
     //prevent the page from reloading when the submit button is pressed.
     event.preventDefault();
@@ -73,7 +73,7 @@ document.addEventListener("submit", function (event) {
 
 
 
-function formSubmission (document, list, pilot, copilot, fuelLevel, cargoMass) {
+function formSubmission (document, pilot, copilot, fuelLevel, cargoMass) {
 
     launchStatus.innerHTML += `
         <div>
