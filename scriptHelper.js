@@ -125,7 +125,7 @@ function formSubmission (document, pilot, copilot, fuelLevel, cargoMass) {
 async function myFetch() {
 let planetsReturned;
 
-planetsReturned = await fetch("https://handlers.education.launchcode.org/static/planets.json").then( function(response) {response.json().then(function (planetsReturned) {
+await fetch("https://handlers.education.launchcode.org/static/planets.json").then( function(response) {response.json().then(function (planetsReturned) {
 
     return planetsReturned;
     });
