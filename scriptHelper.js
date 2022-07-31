@@ -4,9 +4,15 @@ require('isomorphic-fetch');
 
 function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
     // Here is the HTML formatting for our mission target div.
-    
-    //    fetch("https://handlers.education.launchcode.org/static/planets.json").then(function (response) {
-    //     response.json().then(function (json) {
+    //             <h2>Mission Destination</h2>
+    //             <ol>
+    //                 <li>Name: </li>
+    //                 <li>Diameter: </li>
+    //                 <li>Star: ${star}</li>
+    //                 <li>Distance from Earth: </li>
+    //                 <li>Number of Moons: </li>
+    // //    fetch("https://handlers.education.launchcode.org/static/planets.json").then(function (response) {
+    // //     response.json().then(function (json) {
          const missionTarget = document.getElementById("missionTarget");
     
                      missionTarget.innerHTML += `
@@ -26,7 +32,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
 
 
 
-function validateInput() {
+function validateInput(testInput) {
 document.addEventListener("submit", function (event) {
     //prevent the page from reloading when the submit button is pressed.
     event.preventDefault();
@@ -67,7 +73,7 @@ document.addEventListener("submit", function (event) {
 
 
 
-function formSubmission (document, pilot, copilot, fuelLevel, cargoMass) {
+function formSubmission (document, list, pilot, copilot, fuelLevel, cargoMass) {
 
     launchStatus.innerHTML += `
         <div>
@@ -129,7 +135,7 @@ planetsReturned = await fetch("https://handlers.education.launchcode.org/static/
 
 };
 
-async function pickPlanet (planets) {
+function pickPlanet (planets) {
     window.addEventListener("load", () => {
         fetch("https://handlers.education.launchcode.org/static/planets.json").then(function (response) {
             response.json().then(function (planetaryData) {
